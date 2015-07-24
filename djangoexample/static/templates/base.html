@@ -23,25 +23,21 @@
     </head>
 
     <body>
-
-        {% include 'navbar.html' %}
-        <div class='jumbotron'>
-            <h1></h1>
-
-        </div>
+        {% include 'navbar.html' %} 
+        
+        {% block jumbotron %}
+        {% endblock %}
+        
         <div class="container">
             <div class="starter-template">
 
                 {%block content%}
                 {%endblock%}
-                {% block two %}
-                {% endblock %}
             </div>
 
         </div><!-- /.container -->
 
         <!-- Bootstrap core JavaScript================================================== -->
-
         <!-- Placed at the end of the document so the pages load faster -->
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -51,7 +47,6 @@
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
         <script src="{% static 'js/docs.min.js' %}"></script>
         <script src="{% static 'js/jquery.min.js' %}"></script>
-
     </body>
 </html>
 
