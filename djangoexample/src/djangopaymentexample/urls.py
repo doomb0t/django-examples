@@ -8,6 +8,7 @@ urlpatterns = patterns('',
      url(r'^about/$', 'profiles.views.about', name='about'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^contact/$', 'contact.views.contact', name='contact'),
     url(r'^admin/', include(admin.site.urls)),
    ) 
 
