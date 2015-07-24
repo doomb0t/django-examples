@@ -16,7 +16,7 @@
                         {% url 'contact' as contact %}
                         <li {%if request.path == home %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
                         <li {%if request.path == about %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
-                        <li {%if request.path == contact %} class="active" {% endif %}><a href="contact">Contact</a></li>
+                        <li {%if request.path == contact %} class="active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
 
                 </div><!--/.nav-collapse -->
