@@ -9,6 +9,7 @@ from .forms import contactForm
 def contact(request):
     title = 'Contact'
     form = contactForm(request.POST or None)
+    confirm_message = None
     if form.is_valid():
         comment = form.cleaned_data['comment']
         name = form.cleaned_data['name']
@@ -21,6 +22,6 @@ def contact(request):
         confirm_message = "Thanks for the message!"
         form = None
     
-    context = { 'title' : title, 'form':form, 'confirm message': confirm_message} 
+    context = { 'title' : title, 'form': form, 'confirm_message': confirm_message} 
     template = 'contact.html'
     return render(request, template, context)

@@ -41,7 +41,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'profiles',
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     )
 
 MIDDLEWARE_CLASSES = (
@@ -95,4 +100,52 @@ if DEBUG:
     MEDIA_URL = '/media/'
     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "static-only")
     MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
-    STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), "static", "static"),)
+    STATICFILES_DIRS = (os.path.join(os.path.dirname(BASE_DIR), "static", "static"),)   
+    
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
+        "django.core.context_processors.debug",
+        "django.core.context_processors.i18n",
+        "django.core.context_processors.media",
+        "django.core.context_processors.static",
+        "django.core.context_processors.tz",
+        "django.contrib.messages.context_processors.messages",
+        "django.core.context_processors.request",
+        )
+
+AUTHENTICATION_BACKENDS = (
+        'django.contrib.auth.backends.ModelBackend',
+        'allauth.account.auth_backends.AuthenticationBackend',
+        )
+
+SITE_ID = 1
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_AUTHENTICATION_METHOD = "username_email"
+ACCOUNT_CONFIRM_EMAIL_ON_GET = False
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = LOGIN_URL
+ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = None
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_EMAIL_VERIFICATION = None
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "My subject: "
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "http"
+
+ACCOUNT_LOGOUT_ON_GET = False
+ACCOUNT_LOGOUT_REDIRECT_URL = "/"
+ACCOUNT_SIGNUP_FORM_CLASS = None
+ACCOUNT_SIGNUP_PASSWORD_VERIFICATION  = True 
+ACCOUNT_UNIQUE_EMAIL = True
+ACCOUNT_USER_MODEL_USERNAME_FIELD = "username"
+ACCOUNT_USER_MODEL_EMAIL_FIELD = "email"
+
+ACCOUNT_USERNAME_MIN_LENGTH = 5
+ACCOUNT_USERNAME_BLACKLIST = []
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_PASSWORD_INPUT_RENDER_VALUE = False
+ACCOUNT_PASSWORD_MIN_LENGTH = 6
+ACCOUNT_LOGIN_ON_EMAIL_CONFIRMATION = True
