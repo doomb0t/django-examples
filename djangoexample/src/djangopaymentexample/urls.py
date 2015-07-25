@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
+
 urlpatterns = patterns('',
     url(r'^$', 'profiles.views.home', name='home'),
     url(r'^about/$', 'profiles.views.about', name='about'),
