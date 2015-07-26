@@ -4,19 +4,19 @@
 
 {% block content %}
     <div class='row'>
-    <div class='col-sm-6 col-sm-offset-3'>
-        <h1>{{ title }}</h1>
+        <div class='col-sm-6 col-sm-offset-3'>
+            <h1>{{ title }}</h1>
 
-        {% if confirm_message  %}
-            <p> {{ confirm_message }} </p>
-        {% endif %}
+            {% if confirm_message  %}
+                <p> {{ confirm_message }} </p>
+            {% endif %}
 
-        {% if form  %}
-            <form method='POST' action=""> {% csrf_token %}
+            {% if form  %}
+                <form method='POST' action=""> {% csrf_token %}
                     {{ form | crispy }}
-            <input type="submit" value='submit form' class='btn btn-default' />
-            </form>
-        {%endif%}
-    </div>
+                    <input type="submit" value='submit form' class='btn btn-default' />
+                </form>
+            {%endif%}
+        </div>
     </div>
 {% endblock %}

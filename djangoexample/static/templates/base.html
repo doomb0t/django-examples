@@ -1,5 +1,4 @@
 {% load staticfiles%}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,10 +26,10 @@
 
     <body>
         {% include 'navbar.html' %} 
-        
+
         {% block jumbotron %}
         {% endblock %}
-        
+
         <div class="container">
             <div class="starter-template">
 
@@ -45,15 +44,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script> 
         <script src="{% static 'js/docs.min.js' %}"></script>
-        
+
         {% block script %}
 
         {% endblock %}
 
-    <script>
-    $(document).ready(function(){
-        {% block jquery %}
-        {% endblock %}
+        <script>
+$(document).ready(function(){
+    {% block jquery %}
+    {% endblock %}
 });
         </script>
 
