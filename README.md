@@ -1,2 +1,2 @@
-# django-paymentprocess-example
-This is a work in progress, and will be a working example of a django app that includes credit card payment processing with Stripe.
+# jonsonesen.me
+This is a work in progress, it will be deployed to jonsonesen.me and will showcase various projects I complete.
