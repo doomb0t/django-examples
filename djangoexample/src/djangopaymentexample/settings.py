@@ -14,7 +14,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 EMAIL_HOST = 'smtp.gmail.cpm'
 EMAIL_HOST_USER = 'iwizardpdx@gmail.com'
-EMAIL_HOST_PASSWORD = 'SUPER SECRET'
+EMAIL_HOST_PASSWORD = '%%34tm0z4##'
 EMAIL_PORT = '587'
 EMAIL_USE_TLS = True
 
@@ -25,11 +25,11 @@ EMAIL_USE_TLS = True
 SECRET_KEY = '!bjs9#*dew=&srz8p%3_6u!c!+vg1z$hik^ci+sez#+g&03h*y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
