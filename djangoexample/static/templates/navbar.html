@@ -22,11 +22,12 @@
                     <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu">
+                    {% if not request.user.is_authenticated %}
                     <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
                     <li><a href="{% url 'account_login' %}">Login</a></li>
+                    {% else %}
                     <li><a href="{% url 'account_logout' %}">Logout</a></li>
-
-                    <li><a href="#">Separated link</a></li>
+                    {% endif %}
                 </ul>
             </li>
         </ul>
