@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">iWizard LLC.</a>
+        <a class="navbar-brand" href="#">Bootstrap Theme Example</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -27,6 +27,7 @@
                     <li><a href="{% url 'account_login' %}">Login</a></li>
                     {% else %}
                     <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                    <li><a href="{% url 'checkout' %}">Checkout</a></li>
                     {% endif %}
                 </ul>
             </li>
