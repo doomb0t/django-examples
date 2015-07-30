@@ -20,3 +20,9 @@ class userStripe(models.Model):
             return str(self.stripe_id)
         else:
             return self.user.username
+
+def my_callback(sender,request, user,  **kwargs):
+        print("Request finished!")
+        print(user)
+
+user_logged_in.connect(my_callback)
