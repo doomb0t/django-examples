@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('profiles', '0001_squashed_0010_remove_userstripe_user'),
+        ('profiles', '0001_initial'),
     ]
 
     operations = [
