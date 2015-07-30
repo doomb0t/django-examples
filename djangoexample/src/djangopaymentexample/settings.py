@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'stripe',
     )
 
 MIDDLEWARE_CLASSES = (
@@ -112,6 +113,7 @@ TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
         "django.core.context_processors.tz",
         "django.contrib.messages.context_processors.messages",
         "django.core.context_processors.request",
+        "django.core.context_processors.csrf",
         )
 
 AUTHENTICATION_BACKENDS = (

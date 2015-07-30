@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^contact/$', 'contact.views.contact', name='contact'),
     (r'^accounts/', include('allauth.urls')),
     url(r'^profile/$', 'profiles.views.profile', name='profile'),
+    url(r'^checkout/$', 'checkout.views.checkout', name='checkout'),
     
     url(r'^admin/', include(admin.site.urls)),
    ) 
