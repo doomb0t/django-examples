@@ -7,14 +7,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Jon Sonesen</a>
+        <a class="navbar-brand" href="#">iWizard LLC.</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
             {% url 'home' as home %}
             {% url 'about' as about %}
             {% url 'contact' as contact %}
-            <li {%if request.path == home %} class="active" {% endif %}><a href="{% url 'home' %}">Work</a></li>
+            <li {%if request.path == home %} class="active" {% endif %}><a href="{% url 'home' %}">Home</a></li>
             <li {%if request.path == about %} class="active" {% endif %}><a href="{% url 'about' %}">About</a></li>
             <li {%if request.path == contact %} class="active" {% endif %}><a href="{% url 'contact' %}">Contact</a></li>
             <li class="dropdown">

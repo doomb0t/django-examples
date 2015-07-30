@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^about/$', 'profiles.views.about', name='about'),
     url(r'^contact/$', 'contact.views.contact', name='contact'),
     (r'^accounts/', include('allauth.urls')),
+    url(r'^profile/$', 'profiles.views.profile', name='profile'),
     
     url(r'^admin/', include(admin.site.urls)),
    ) 
